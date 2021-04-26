@@ -23,27 +23,49 @@ catkin_make
 source devel/setup.bash
 cd src
 git clone https://github.com/jeetpatel242/Turtlebot3-Astar-ROS
+```
 
-cd ..
+```
+cd Turtlebot3-Astar-ROS/scripts
+chmod +x algo.py main.py map.py utils.py
+
+cd
+cd turtlebot3_ws/
 catkin_make
 ```
+
 (Alternatively, copy the turtlebot3_astar package into the 'turtlebot3_ws/src' directory and write 'catkin_make' in terminal)
 
 ## How to run Simulation
 Open a terminal window and run the following commands
 
 ```
-cd ~/catkin_ws
+cd ~/turtlebot3_ws
 source devel/setup.bash
-roslaunch turtlebot3_astar turtlebot3_gazebo_astar.launch x_pos:=-4 y_pos:=-4
+roslaunch turtlebot3_astar turtlebot3_gazebo_astar.launch x_pos:=-4.1 y_pos:=-4.1
 
 ```
 This launches the gazebo environment. In the same terminal, program will ask the user for following inputs:
-* Clearance (in meters) from the obstacles, provide input in 'float' format. For eg: 0.2.
+* Clearance (in meters) from the obstacles, provide input in 'float' format. For eg: 0.1.
 * Choose the initial position, provide input in [x,y,theta] format. For eg: [1, 1, 0]
 * Choose the goal position, provide input in [x,y] format. For eg. [9, 9]
 * Enter the two RPM's for the wheels, provide input in [rpm1,rpm2] format, For eg: [6,4]
 * Turtlebot will follow the planned path from start to goal avoiding the obstacles.
+
+```
+Parameters for video-1:
+initial position --> [0.9, 0.9, 0]
+final position --> [9, 9]
+rpm --> [6,4]
+```
+
+```
+Parameters for video-2:
+initial position --> [3, 7, 0]
+final position --> [9, 9]
+rpm --> [6,4]
+```
+
 
 ## Maintainers ##
 ### Group-10
