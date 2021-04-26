@@ -3,8 +3,6 @@
 
 # Implementation of A* algorithm on a differential drive (non-holonomic) TurtleBot robot - ROS+Gazebo
 
-## Overview
-
 
 ## Installing Dependencies
 This program works on a device running Ubuntu 18.04 and ROS Melodic.
@@ -52,19 +50,22 @@ This launches the gazebo environment. In the same terminal, program will ask the
 * Enter the two RPM's for the wheels, provide input in [rpm1,rpm2] format, For eg: [6,4]
 * Turtlebot will follow the planned path from start to goal avoiding the obstacles.
 
+**Parameters for video-1**
 ```
-Parameters for video-1:
-initial position --> [0.9, 0.9, 0]
-final position --> [9, 9]
+roslaunch turtlebot3_astar turtlebot3_gazebo_astar.launch x_pos:=1 y_pos:=3
+```
+initial position --> [6, 8, 0]<br />
+final position --> [9, 9]<br />
 rpm --> [6,4]
-```
 
+
+**Parameters for video-2**<br />
 ```
-Parameters for video-2:
-initial position --> [3, 7, 0]
-final position --> [9, 9]
-rpm --> [6,4]
+roslaunch turtlebot3_astar turtlebot3_gazebo_astar.launch x_pos:=3 y_pos:=0
 ```
+initial position --> [8, 5, 0]<br />
+final position --> [7, 7]<br />
+rpm --> [6,4]<br />
 
 
 ## Maintainers ##
