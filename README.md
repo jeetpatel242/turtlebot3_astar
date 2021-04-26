@@ -27,6 +27,8 @@ git clone https://github.com/jeetpatel242/Turtlebot3-Astar-ROS
 cd ..
 catkin_make
 ```
+(Alternatively, copy the turtlebot3_astar package into the 'turtlebot3_ws/src' directory and write 'catkin_make' in terminal)
+
 ## How to run Simulation
 Open a terminal window and run the following commands
 
