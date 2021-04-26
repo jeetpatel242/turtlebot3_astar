@@ -20,11 +20,11 @@ cd ~/turtlebot3_ws
 catkin_make
 source devel/setup.bash
 cd src
-git clone https://github.com/jeetpatel242/Turtlebot3-Astar-ROS
+git clone https://github.com/jeetpatel242/turtlebot3_astar
 ```
 
 ```
-cd Turtlebot3-Astar-ROS/scripts
+cd turtlebot3_astar/scripts
 chmod +x algo.py main.py map.py utils.py
 
 cd
